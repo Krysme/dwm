@@ -36,7 +36,9 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",         NULL,       NULL,       0,            1,           -1 },
 	{ "qutebrowser",  NULL,       NULL,       1 << 9,       0,           -1 },
+	{ "Firefox",      NULL,       NULL,       1 << 9,       0,           -1 },
 	{ "Emacs",        NULL,       NULL,       1 << 0,       0,           -1 },
+	{ "mpv",          NULL,       NULL,       1 << 1,       0,           -1 },
 };
 
 /* layout(s) */
@@ -111,9 +113,10 @@ static Key keys[] = {
 	/// start a terminal
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 
-
 	/// vpn switch
 	{ MODKEY|ControlMask,           XK_v, spawn,          {.v =  vpn } },
+	/// snapshot
+	{ MODKEY|ControlMask,           XK_a,      spawn,          {.v = { "snapshot.sh", NULL }} },
 
 	{ MODKEY,                       XK_f,      togglebar,      {0} },
 	{ MODKEY,                       XK_h,      focusstack,     {.i = +1 } },

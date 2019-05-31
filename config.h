@@ -92,6 +92,7 @@ static const char *volume_up[] = { "amixer", "-q", "set", "Master", "5%+", NULL 
 static const char *volume_down[] = { "amixer", "-q", "set", "Master", "5%-", NULL };
 static const char *mute[] = { "amixer", "set", "Master", "toggle", NULL };
 static const char *vpn[] = { "vpn-switch.sh", NULL };
+static const char *snapshot[] = { "snapshot.sh", NULL };
 
 // bindsym $alt+ctrl+p exec amixer -q set Master 5%+
 // bindsym $alt+ctrl+n exec amixer -q set Master 5%-
@@ -116,7 +117,7 @@ static Key keys[] = {
 	/// vpn switch
 	{ MODKEY|ControlMask,           XK_v, spawn,          {.v =  vpn } },
 	/// snapshot
-	{ MODKEY|ControlMask,           XK_a,      spawn,          {.v = { "snapshot.sh", NULL }} },
+	{ MODKEY|ControlMask,           XK_a,      spawn,          {.v = snapshot } },
 
 	{ MODKEY,                       XK_f,      togglebar,      {0} },
 	{ MODKEY,                       XK_h,      focusstack,     {.i = +1 } },

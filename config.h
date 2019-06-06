@@ -94,10 +94,6 @@ static const char *mute[] = { "amixer", "set", "Master", "toggle", NULL };
 static const char *vpn[] = { "vpn-switch.sh", NULL };
 static const char *snapshot[] = { "snapshot.sh", NULL };
 
-// bindsym $alt+ctrl+p exec amixer -q set Master 5%+
-// bindsym $alt+ctrl+n exec amixer -q set Master 5%-
-// bindsym $alt+ctrl+m exec amixer set Master toggle
-
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	/// rofi run program
